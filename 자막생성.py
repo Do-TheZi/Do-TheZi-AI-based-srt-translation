@@ -121,8 +121,8 @@ class SubtitleTranslatorApp:
         nllb_name = self.nllb_model_var.get()
         info_w = self.gpuinfo_whisper.get(whisper_name, "모델을 선택하세요.")
         info_n = self.gpuinfo_nllb.get(nllb_name, "모델을 선택하세요.")
-        self.gpu_label_whisper.config(text=f"Whisper 추천 GPU: {info_w}")
-        self.gpu_label_nllb.config(text=f"NLLB200 추천 GPU: {info_n}")
+        self.gpu_label_whisper.config(text=f"Whisper 추천: {info_w}")
+        self.gpu_label_nllb.config(text=f"NLLB200 추천: {info_n}")
 
     def select_files(self):
         files = filedialog.askopenfilenames(
@@ -319,3 +319,4 @@ if __name__ == "__main__":
     root = tk.Tk()
     app = SubtitleTranslatorApp(root)
     root.mainloop()
+
